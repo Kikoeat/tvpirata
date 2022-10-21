@@ -1,0 +1,122 @@
+header{
+	display: flex;
+	min-height: 150px;
+	width: 100%;		
+	margin-left: 80px;	
+	align-items: center;	
+}
+
+.lado2{
+	padding-left: 50%;
+	padding-top: 50px;	
+	position: absolute;	
+}
+
+.navigation{		
+	float: right;
+	width: 400px;
+	height: 50px;		
+	border-radius: 30px;
+	display: flex;	
+}
+
+.navigation li{
+	position: relative;
+	list-style-type: none;
+	width: 60px;
+	margin: 0px 5px;		
+}
+
+.navigation li::before{	
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background: #fff;
+	border-radius: 50%;
+	transition: 0.5s;
+	top: 35px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.navigation li.active::before{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,
+	0 0 10px #0f0,
+	0 0 20px #0f0,
+	0 0 30px #0f0,
+	0 0 40px #0f0,
+	0 0 50px #0f0;
+}
+
+.navigation li a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-decoration: none;
+	
+}
+
+.navigation li a .icon{
+	position: absolute;
+	font-size: 1em;
+	width: 55px;
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #aaa;
+	border-radius: 50%;
+	transition: 0.5s;
+	transition-delay: 0.1s;
+}
+
+.navigation li.active a .icon{
+	background: #46d819;
+	color: #ffff;
+	transform: translateY(-35px);
+	box-shadow: 5px 5px 7px rgba(0,0,0,0.25),
+	inset 2px 2px 3px rgba(255,255,255,0.25),	
+	inset -3px -3px 5px rgba(0,0,0,0.5);
+}
+
+.navigation li a .icon::before{
+	content: '';
+	position: absolute;
+	inset: 10px;
+	background: #2f363e;
+	border-radius: 50%;
+	box-shadow: 5px 5px 7px rgba(0,0,0,0.25),
+	inset 2px 2px 3px rgba(255,255,255,0.25),	
+	inset -3px -3px 5px rgba(0,0,0,0.5);
+	transform: scale(0);
+	transition: 0.5s;
+}
+
+.navigation li.active a .icon::before{
+	transform: scale(1);
+}
+
+.navigation li a .text
+{
+	position: absolute;
+	font-size: 0.7em;
+	color: #2f363e;
+	transform: translateY(20px);
+	padding: 2px 10px;
+	background: #fff;
+	border-radius: 15px;
+	box-shadow: 5px 5px 7px rgba(0,0,0,0.25),
+	inset 2px 2px 3px rgba(255,255,255,0.25),	
+	inset -3px -3px 5px rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: 0.5s;	
+}
+
+.navigation li.active a .text
+{
+	opacity: 1;
+	transform: translateY(10px);
+	transition-delay: 0s;
+}
