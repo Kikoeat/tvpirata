@@ -1,41 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
 @import 'relogio.css';
 @import 'header.css';
+
 *
-{
-  margin: 0;
+{  
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; 
 }
+
 body
 {
-  display: flex;
+  display: flex;  
+  margin-top: 50px;
+  margin-left: 50px;  
   flex-direction: row;
   flex-wrap: wrap;  
   background: #20024a; 
 }
 
-
-#corpo1{
-  float: top;
-  width: 1000px;
-  height: 800px;
-  display: flow;
-  padding-bottom: 80%;
-}
-
-#corpo2{
-  float: top;
-  width: 1000px;
-  height: 800px;
-  display: flow;   
-}
 .container
 {
   display: flex;
   margin-top: 30px;
-  padding: 20px;
+  padding: 40px 20px 20px 20px; 
 }
+
 .container .card
 {
   position: relative;
@@ -98,8 +87,8 @@ body
 .container .card .contentBx
 {
   position: absolute;
-  bottom: -40px;
-  width: 100%;
+  bottom: -10px;    /* distancia do nome do canal do bottom*/
+  width: 100%;    
   height: 80px;
   text-align: center;
   transition: 1s;
@@ -144,7 +133,7 @@ body
   visibility: visible;
   transition-delay: 0.6s;
 }
-.container .card .contentBx .size h3,
+/*.container .card .contentBx .size h3,
 .container .card .contentBx .color h3
 {
   color: #fff;
@@ -172,7 +161,7 @@ body
 .container .card .contentBx .size span:hover
 {
   color: #111;
-  background: #9bdc28;
+  background: #dc2828;
 }
 .container .card .contentBx .color span
 {
@@ -195,13 +184,14 @@ body
 {
   background: #e91e63;
 }
+*/
 .container .card .contentBx a
 {
   display: inline-block;
   padding: 10px 30px;
   background: #fff;
   border-radius: 4px;
-  margin-top: 50px;
+  margin-top: 70px;   /* movimento da caixa assistir*/
   text-decoration: none;
   font-weight: 600;
   color: #111;
